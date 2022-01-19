@@ -1,6 +1,2 @@
-[Web Sistemi i Tehnologije]
-
-Skripta start_console.bat pokrece konzolu u novom virtual enviromentu za trenutni projekat
-Skripta start_flask_server.bat pokrece main.py skriptu unutar src foldera
-
-Za sve dodatne informacije: dsijacic@raf.rs
+Jedan manji projekat za Python (Flask) backend side
+Validiranje podataka, upis u bazu, citanje iz baze, brisanje podataka iz baze (MYSQL) odnosno CRUD.
