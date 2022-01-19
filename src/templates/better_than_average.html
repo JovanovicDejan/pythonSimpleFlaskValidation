@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better than average</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Broj indeksa</th>
+            <th>Ime prezime</th>
+            <th>godina rodjenja</th>
+            <th>sifra</th>
+            <th>prosek</th>
+            <th>polozeni ispiti</th>
+        </tr>
+        {% for d in data %}
+        <tr>
+            <td>{{d[0]}}</td>
+            <td>{{d[1]}}</td>
+            <td>{{d[2]}}</td>
+            <td>{{d[3]}}</td>
+            <td>{{d[4]}}</td>
+            <td>{{d[5]}}</td>
+            <td>{{d[6]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

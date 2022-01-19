@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <form action="/register" method="post">
+        <p>
+            <label for="broj_indeksa">Broj indeksa</label>
+            <input type="text" name="broj_indeksa" id="broj_indeksa" required>
+            <span>{{broj_indeksa_error}}</span>
+        </p>
+        <p>
+            <label for="ime_prezime">Ime prezime</label>
+            <input type="text" name="ime_prezime" id="ime_prezime" required>
+        </p>
+        <p>
+            <label for="godina_rodjenja">Godina rodjenja</label>
+            <input type="number" name="godina_rodjenja" id="godina_rodjenja" required>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <span>{{password_error}}</span>
+        </p>
+        <p>
+            <label for="confirm_password">Confirm password</label>
+            <input type="password" name="confirm_password" id="confirm_password" required>
+        </p>
+        <p>
+            <label for="prosek">Prosek</label>
+            <input type="number" name="prosek" id="prosek" required>
+            <span>{{prosek_error}}</span>
+        </p>
+        <p>
+            <label for="broj_polozenih_ispita">Broj polozenih ispita</label>
+            <input type="number" name="broj_polozenih_ispita" id="broj_polozenih_ispita" required>
+            <span>{{broj_polozenih_ispita_error}}</span>
+        </p>
+        <p>
+            <input type="submit" value="Registruj se">
+        </p>
+    </form>
+</body>
+</html>

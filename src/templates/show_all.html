@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show all</title>
+</head>
+<body>
+    {% if 'user' not in session %}
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+    {% elif 'user' in session  %}
+    <a href="/logout">Logout</a>
+    {% endif %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Broj indeksa</th>
+            <th>Ime prezime</th>
+            <th>Godina rodjenja</th>
+            <th>Password</th>
+            <th>Prosek</th>
+            <th>Broj polozenih ispita</th>
+            {% if 'user' in session %}
+            <th>Update</th>
+            <th>Delete</th>
+            {% endif %}
+        </tr>
+        {% for us in users %}
+        <tr>
+            <th>{{us[0]}}</th>
+            <th>{{us[1]}}</th>
+            <th>{{us[2]}}</th>
+            <th>{{us[3]}}</th>
+            <th>{{us[4]}}</th>
+            <th>{{us[5]}}</th>
+            <th>{{us[6]}}</th>
+            {% if 'user' in session %}
+            <th><a href="/update/{{us[1]}}">Update</a></th>
+            <th>
+                <form action="/delete/{{us[1]}}" method="post">
+                    <input type="submit" value="Delete">
+                </form>
+            </th>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
